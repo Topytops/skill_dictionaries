@@ -33,13 +33,18 @@ def without_duplicates(words):
 
 
     """
-    unique_list = []
-    for word in words:
-        if word not in unique_list:
-            unique_list.append(word)
+    non_duplicates = []
+    non_duplicates = set(words)
+    return non_duplicates
+
+    # answer using a for loop
+    # unique_list = []
+    # for word in words:
+    #     if word not in unique_list:
+    #         unique_list.append(word)
 
 
-    return unique_list
+    # return unique_list
 
 
 def find_unique_common_items(list1, list2):
@@ -68,13 +73,19 @@ def find_unique_common_items(list1, list2):
 
     """
 
+    unique_set = ()
 
-    unique_common_items = []
-    for item in list1:
-        if item in list2:
-            unique_common_items.append(item)
+    unique_set = set(list1) & set(list2)
 
-    return unique_common_items            
+    return unique_set
+
+    #answer using a for loop
+    # unique_common_items = []
+    # for item in list1:
+    #     if item in list2:
+    #         unique_common_items.append(item)
+
+    # return unique_common_items            
 
 
 
