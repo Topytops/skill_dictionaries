@@ -206,15 +206,21 @@ def sort_by_word_length(words):
 
     """
 
-    return []
+    # return []
 
     word_length = {}
     for word in words:
-        if len(word) is not in word_length.keys():
-            word_length(len[word]) = [word]
+        if len(word) not in word_length.keys():
+            word_length[len(word)] = [word]
         else:
-            word_length(len[word]).append(word)
-        print word_length    
+            word_length[len(word)].append(word)
+
+    word_list_of_lenght = []
+
+    for key, value in word_length.iteritems():
+        word_list_of_lenght.append((key, value))
+
+    return word_list_of_lenght     
 
 
 
