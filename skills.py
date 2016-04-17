@@ -253,7 +253,23 @@ def get_sum_zero_pairs(input_list):
 
     """
 
-    return []
+
+    list_of_sets = set(input_list)
+    list_of_all_pairs = []
+
+    for number in list_of_sets:
+        list_of_tuples = []
+
+        if number <= 0 and abs(number) in list_of_sets:
+            #finding the negative pair
+            list_of_tuples.append(number)
+            list_of_tuples.append(abs(number))
+
+        if list_of_tuples != []:
+            list_of_all_pairs.append(list_of_tuples)
+
+    return list_of_all_pairs                   
+
 
 
 ##############################################################################
