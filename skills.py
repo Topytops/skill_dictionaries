@@ -156,7 +156,21 @@ def translate_to_pirate_talk(phrase):
 
     """
 
-    return ""
+    pirate_talk = 'sir': 'matey', 'hotel': 'fleabag', 'student': 'swabbie', 'boy': 'matey','professor': 'foul blaggart', 'restaurant': 'galley', 'your': 'yer', 'excuse': 'arr', 'students': 'swabbies', 'are': 'be', 'restroom': 'head', 'my': 'me', 'is': 'be'}
+
+    pirate_translation = []
+
+    delimiter = " "
+
+    word_phrase = phrase.split()
+    for word in word_phrase:
+        if word in pirate_talk.key():
+            pirate_translation.append(pirate_talk[word])
+        else:
+            pirate_translation = delimiter.join(pirate_translation)    
+
+
+    return pirate_translation
 
 
 def sort_by_word_length(words):
