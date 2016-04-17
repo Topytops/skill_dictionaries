@@ -106,7 +106,16 @@ def count_unique(input_string):
 
     """
 
-    return {}
+    word_count = {}
+    for word in input_string.split():
+        if word not in word_count:
+            word_count[words] = 1
+        else:
+            word_count[word]+= 1
+
+
+
+    return word_count
 
 
 def translate_to_pirate_talk(phrase):
