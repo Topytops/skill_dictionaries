@@ -174,11 +174,7 @@ def translate_to_pirate_talk(phrase):
 
     }
 
-
-   
     delimiter = " "
-   
-
     word_phrase = phrase.split()
     pirate_translation = []
 
@@ -211,6 +207,15 @@ def sort_by_word_length(words):
     """
 
     return []
+
+    word_length = {}
+    for word in words:
+        if len(word) is not in word_length.keys():
+            word_length(len[word]) = [word]
+        else:
+            word_length(len[word]).append(word)
+        print word_length    
+
 
 
 def get_sum_zero_pairs(input_list):
