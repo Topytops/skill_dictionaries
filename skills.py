@@ -156,22 +156,45 @@ def translate_to_pirate_talk(phrase):
 
     """
 
-    pirate_talk = 'sir': 'matey', 'hotel': 'fleabag', 'student': 'swabbie', 'boy': 'matey','professor': 'foul blaggart', 'restaurant': 'galley', 'your': 'yer', 'excuse': 'arr', 'students': 'swabbies', 'are': 'be', 'restroom': 'head', 'my': 'me', 'is': 'be'}
+    pirate_dictionary_talk = {
+        'sir' : 'matey',
+        'hotel': 'fleabag inn',
+        'student': 'swabbie',
+        'boy': 'matey',
+        'professor': 'oul blaggart',
+        'restaurant': 'galley',
+        'your': 'yer',
+        'excuse': 'arr',
+        'students': 'swabbies',
+        'are': 'be',
+        'restroom': 'head',
+        'my': 'me',
+        'is': 'be',
+        'man': 'matey' # added to the dictionary to make it work
 
-    pirate_translation = []
+    }
 
+
+   
     delimiter = " "
+   
 
     word_phrase = phrase.split()
+    pirate_translation = []
+
     for word in word_phrase:
-        if word in pirate_talk.key():
-            pirate_translation.append(pirate_talk[word])
+        if word in pirate_dictionary_talk.keys():
+            pirate_translation.append(pirate_dictionary_talk[word])
+
         else:
-            pirate_translation = delimiter.join(pirate_translation)    
+            pirate_translation.append(word)
+
+    pirate_translation = delimiter.join(pirate_translation)
 
 
     return pirate_translation
 
+   
 
 def sort_by_word_length(words):
     """Given list of words, return list of ascending [(len, [words])].
